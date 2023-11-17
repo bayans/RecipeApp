@@ -1,11 +1,16 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import MoodQuestion from './pages/MoodQuestion';
 import Login from './pages/Login';
 
-function App() {
+const App = () => {
+
+  const [mood, setMood] = useState(null);
+
   return (
     <Routes>
+      <Route path="/mood-question" element={<MoodQuestion moodHandler={setMood} />} />
       <Route path="/login" element={<Login />} />
     </Routes>
   );
