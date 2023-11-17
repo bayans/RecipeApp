@@ -5,6 +5,7 @@ import MoodQuestion from './pages/MoodQuestion';
 import CompanionshipQuestion from './pages/CompanionshipQuestion';
 import MotivationQuestion from './pages/MotivationQuestion';
 import SuggestedRecipes from './pages/SuggestedRecipes';
+import RecipesIngredients from './pages/RecipesIngredients';
 import Login from './pages/Login';
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       <Route path="/companionship-question" element={<CompanionshipQuestion mood={mood} companionshipHandler={setCompanionship} />} />
       <Route path="/motivation-question" element={<MotivationQuestion mood={mood} companionship={companionship} motivationHandler={setMotivation} />} />
       <Route path="/suggested-recipes" element={<SuggestedRecipes mood={mood} companionship={companionship} motivation={motivation} recipes={recipes} setRecipesHandler={setRecipes} selectedRecipeHander={setSelectedRecipe} />} />
+      <Route path="/recipes-ingredients" element={<RecipesIngredients selectedRecipe={selectedRecipe} />} />
       <Route path="/login" element={<Login />} />
     </Routes>
   );
