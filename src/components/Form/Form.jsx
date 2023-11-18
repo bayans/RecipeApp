@@ -5,7 +5,7 @@ import './Form.css';
 
 const Form = (props) => {
 
-    const { formClass, formFields, onSubmit, submitButton, children } = props;
+    const { formClass, formFields, onSubmit, submitButton, submitDisabled, children } = props;
 
     const showSubmitBtn = props.showSubmitBtn ?? true;
 
@@ -54,13 +54,35 @@ const Form = (props) => {
                     <Button
                         key={index}
                         id={field.id}
+                        className={field.className || null}
                         type={field.type}
                         text={field.text}
                         onClick={field.onClick}
+                        disabled={field.disabled}
                         showBtn={field.showBtn ?? true}
                     >
                         {field.child}
                     </Button>
+                );
+            case 'list':
+                return (
+                    <ul key={index}>
+                        {field.list.map((listField, fkey) => (
+                            <li key={fkey}>
+                                {listField}
+                                {field.listChildren.map((child, lkey) => (
+                                    <Button
+                                        key={lkey}
+                                        type={child.childType}
+                                        className='button deleteBtn'
+                                        text={child.text}
+                                        onClick={() => { child.onClick(fkey) }}
+                                        showBtn={child.showBtn ?? true}
+                                    />
+                                ))}
+                            </li>
+                        ))}
+                    </ul>
                 );
             default: return false
         }
@@ -71,13 +93,14 @@ const Form = (props) => {
 
             {formFields.havingParent ? addParentToMapFields(formFields.fields) : mapFields(formFields)}
 
-            { children }
+            {children}
 
             {Boolean(showSubmitBtn) &&
                 <Button
                     type="submit"
                     className='button'
                     text={submitButton}
+                    disabled={submitDisabled}
                     showBtn={true}
                 />
             }
