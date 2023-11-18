@@ -1,8 +1,9 @@
 import React from 'react';
+import './Input.css';
 
 const Input = (props) => {
 
-    const { className, type, id, name, value, onChange, placeholder, required } = props;
+    const { className, type, id, name, value, defaultValue, inputRef, onChange, onKeyDown, placeholder, required } = props;
 
     return (
         <input
@@ -11,7 +12,10 @@ const Input = (props) => {
             className={className}
             name={name}
             value={value}
+            ref={inputRef}
+            defaultValue={defaultValue}
             onChange={onChange}
+            onKeyDown={onKeyDown}
             required={required}
             placeholder={placeholder}
         />

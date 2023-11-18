@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+.App {
+  text-align: center;
+  margin-top: 120px;
+}
+
 .error {
   color: red;
 }
@@ -82,11 +87,20 @@
   background-color: #f0f0f0;
 }
 
+.recipes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
 .recipe {
+  width: 85%;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  margin: 16px;
+  margin: 16px auto;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -96,9 +110,81 @@
   height: auto;
 }
 
+#searchSection {
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+#searchSection .search-icon {
+  width: 18px;
+  height: 18px;
+  fill: #535557;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+#search {
+  position: relative;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: -45px;
+  border: none;
+  border-left: 1px solid;
+  border-left-color: rgba(0, 0, 0, .2);
+  background: transparent;
+  padding: 15px;
+}
+
+#searchInput {
+  padding: 7px 5px;
+  width: 220px;
+  padding-right: 48px;
+}
+
+#filters {
+  width: 100px;
+  padding: 7px 5px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+#filtersSection {
+  display: none;
+  border: 1px solid grey;
+  width: 340px;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+
+#filtersSection h5 {
+  margin: 5px;
+}
+
+#filtersSection select, #filtersSection input {
+  width: 150px;
+  height: 35px;
+}
+
+.filtersForm {
+  margin-bottom: 30px;
+}
+
+.rowSection {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 12px 0;
+}
+
 a {
   text-decoration: none;
   color: #000;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 30px !important;
 }
 
 .loader {
