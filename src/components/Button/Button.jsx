@@ -3,17 +3,20 @@ import './Button.css';
 
 const Button = (props) => {
 
-  const { text, type, id, className, onClick } = props;
-
+  const { text, type, id, className, onClick, disabled, showBtn, children } = props;
+  
   return (
-      <button
-        id={id}
-        type={type}
-        className={className}
-        onClick={onClick}
-      >
-        {text}
-      </button>
+    <button
+    id={id}
+    type={type}
+    className={className}
+    onClick={onClick}
+    disabled={disabled}
+    style={{"display": showBtn ? "inline" : "none"}}
+  >
+    {text}
+    {children}
+  </button>
   );
 }
 

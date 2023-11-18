@@ -73,7 +73,7 @@ const Login = () => {
             <div className="form-component">
                 <h2 className="form-heading">Login</h2>
                 {logError && <h4 className="error">{logError}</h4>}
-                <Form fields={loginFormFields} submitButton="Login" onSubmit={loginHandler} />
+                <Form formFields={loginFormFields} submitButton="Login" onSubmit={loginHandler} />
             </div>
 
             <div className="form-component">
@@ -86,7 +86,7 @@ const Login = () => {
                         </div>
                     </div>
                 }
-                <Form fields={registerFormFields} submitButton="Register" onSubmit={registerHandler} />
+                <Form formFields={registerFormFields} submitButton="Register" onSubmit={registerHandler} />
             </div>
         </div>
     );
