@@ -69,7 +69,7 @@ const Login = () => {
 
 
     return (
-        <div className="container">
+        <div className="login-container">
             <div className="form-component">
                 <h2 className="form-heading">Login</h2>
                 {logError && <h4 className="error">{logError}</h4>}

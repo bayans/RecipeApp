@@ -98,7 +98,7 @@ const RecipesFilter = ({ selectedRecipeHander }) => {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <h1>Recipe App</h1>
       <Form formClass="filtersForm" formFields={formFields} showSubmitBtn={false} onSubmit={handleSearchSubmit}>
         <div id="filtersSection">
