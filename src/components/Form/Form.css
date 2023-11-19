@@ -1,5 +1,6 @@
 .form-component {
     position: relative;
+    z-index: 0;
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;

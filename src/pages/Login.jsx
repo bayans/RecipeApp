@@ -1,11 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
 import isPasswordValid from "../utils/isPasswordValid";
 import Form from "../components/Form/Form";
 
 const Login = () => {
-    const { login, logError } = useContext(AuthContext);
+    const { isAuth, login, logError } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
     const [loading, toggleLoading] = useState(false);
     const [regError, toggleRegError] = useState(false);
 
@@ -26,6 +30,12 @@ const Login = () => {
         { fieldType: 'label-input', name: 'email', label: 'Email Address', input: regEmail, onChange: setRegEmail, required: true },
         { fieldType: 'label-input', name: 'password', type: 'password', label: 'Password', input: regPassword, onChange: setRegPassword, required: true },
     ];
+
+    useEffect(() => {
+        if(isAuth) {
+            navigate('/');
+        }
+    }, [isAuth, navigate]);
 
     const loginHandler = (e) => {
         e.preventDefault();
@@ -66,7 +76,6 @@ const Login = () => {
                 toggleLoading(false);
             });
     }
-
 
     return (
         <div className="login-container">

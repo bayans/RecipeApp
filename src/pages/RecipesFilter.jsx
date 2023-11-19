@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { Recipes, handleSearch } from './Recipes';
 import Form from '../components/Form/Form';
@@ -30,6 +30,19 @@ const RecipesFilter = ({ selectedRecipeHander }) => {
     document.getElementById('filtersSection').style.display = 'block';
     document.getElementById('searchInput').style.width = '330px';
     e.target.style.display = 'none';
+  };
+
+  const clearFilters = () => {
+    setHealt('');
+    setCalories('');
+    setDiet('');
+  };
+
+  const closeFilters = () => {
+    clearFilters();
+    document.getElementById('filtersSection').style.display = 'none';
+    document.getElementById('searchInput').style.width = '220px';
+    document.getElementById('filters').style.display = 'block';
   };
 
   const handleChangeFilters = (e, type) => {
@@ -99,10 +112,14 @@ const RecipesFilter = ({ selectedRecipeHander }) => {
 
   return (
     <div className="app">
-      <h1>Recipe App</h1>
+      <h1>Recipe Search</h1>
       <Form formClass="filtersForm" formFields={formFields} showSubmitBtn={false} onSubmit={handleSearchSubmit}>
         <div id="filtersSection">
-          <h5>Filters</h5>
+          <div className="rowSectionRight">
+            <Link to="#" onClick={clearFilters}>Clear</Link>
+            <Link to="#" onClick={closeFilters}>X</Link>
+          </div>
+          <h3>Filters</h3>
           <div className="rowSection">
             <select id="allergies" value={healt} onChange={(e) => { handleChangeFilters(e, 'healt') }}>
               <option value="" disabled>Allergies</option>

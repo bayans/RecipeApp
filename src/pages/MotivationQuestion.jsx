@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const MotivationQuestion = ({ mood, companionship, motivationHandler }) => {
+const MotivationQuestion = ({ mood, companionship, motivationHandler, setRecipesHandler }) => {
   const navigate = useNavigate();
   const motivations = ['Very motivated', 'Not motivated'];
 
   useEffect(() => {
     if(!mood && !companionship) navigate("/mood-question");
-  }, [mood, companionship, navigate]);
+    setRecipesHandler([]);
+  }, [mood, companionship, setRecipesHandler, navigate]);
   
 
   return (
