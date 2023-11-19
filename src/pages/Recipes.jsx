@@ -2,8 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const API_ID = '41ba2158';
-const API_KEY = '34e63a88a5651dd8fca6fb4fa37d2d65';
+const API_ID = 'api_id';
+const API_KEY = 'api_key';
 
 const handleSearch = async (searchQuery, healt = null, calories = null, diet = null) => {
 

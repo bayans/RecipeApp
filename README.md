@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# RecipeApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Homepage
+![Home Page](./src/assets/HomePage.png)
 
-## Available Scripts
+## Inhoudsopgave
+- [Inleiding](#inleiding)
+- [Functies](#functies)
+- [Benodigdheden](#benodigdheden)
+- [Installatie Stappen](#installatie-stappen)
+  - [Eerste Methode](#eerste-methode)
+  - [Tweede Methode](#tweede-methode)
+- [Gebruik](#gebruik)
+- [Standaard Gebruikers](#standaard-gebruikers)
 
-In the project directory, you can run:
+## Inleiding
+Deze applicatie is ontwikkeld met als doel je te helpen bij het dagelijkse dilemma van het kiezen van maaltijden en recepten. Het leven kan hectisch zijn, en het bedenken van wat je wilt eten kan een uitdaging zijn. Daarom heb ik deze app gemaakt om dit proces te vereenvoudigen en je te voorzien van suggesties op basis van verschillende criteria.
+Deze documentatie zal je begeleiden bij de installatie van de app, de functies die het biedt, en hoe je het kunt gebruiken om het meeste uit je culinaire avonturen te halen
+Volg de onderstaande stappen om de app te installeren, navigeer door de verschillende secties van deze documentatie en ontdek hoe de Recepten App je kan helpen bij het vinden van de perfecte maaltijd voor elke gelegenheid. Succes en eet smakelijk!
 
-### `npm start`
+## Functies
+- **User Registration and Login:** Gebruikers kunnen accounts aanmaken en veilig inloggen om gepersonaliseerde functies te gebruiken, zoals het aanpassen van profiel.
+  
+- **Receptsuggesties op basis van gemoedstoestand:** De app stelt gebruikers vragen gebaseerd op hun gemoedstoestand om recepten voor te stellen die aansluiten bij hun emotionele staat of voorkeuren op dat moment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Zoeken naar Specifieke Recepten:** Gebruikers kunnen zoeken naar recepten op basis van specifieke criteria zoals gerechtnaam, of dieetvoorkeuren, waardoor het gemakkelijker wordt om gewenste recepten te vinden.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Recepten suggereren op basis van beschikbare ingrediënten:** Door beschikbare ingrediënten in te voeren, suggereert de app recepten die gebruikers kunnen bereiden zonder extra boodschappen te doen.
 
-### `npm test`
+- **Profielupdate:** Gebruikers hebben de mogelijkheid om hun profielen bij te werken, informatie aan te passen.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Slechte dag modus voor troostmaaltijden:** In deze modus stelt de app troostende recepten voor die geschikt zijn voor een rotte dag en gerechten.
 
-### `npm run build`
+## Benodigdheden
+- Node.js - Laatste versie
+- npm - Wordt geïnstalleerd met Node.js
+- Edamam API
+- IDE - Visual Studio Code aanbevolen
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installatie Stappen
+### Eerste Methode
+1. Kloon deze repository naar je lokale machine.
+   ```bash
+   git clone https://github.com/bayans/RecipeApp
+2. Navigeer naar de projectdirectory.
+   ```bash
+   cd RecipeApp
+3. Installeer de benodigde afhankelijkheden
+   ```bash
+   npm install
+4. Ga naar de map RecipeApp/src/pages/Recipes.jsx en stel je Edamam API-gegevens in (deze zijn meegegeven in Verantwoordingsdocument):
+   ```bash
+   const API_ID = 'api_id';
+   const API_KEY = 'api_key';
+5. Start de app.
+   ```bash
+   npm start
+### Tweede Methode
+1. Download het ZIP-bestand van deze repository en pak het uit naar de gewenste map.
+2. Open je terminal en navigeer naar de uitgepakte map.
+3. Volg de stappen 3 tot en met 5 die hierboven zijn genoemd in "Eerste Methode".
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Gebruik
+Na het lokaal draaien van de app, open je deze via je webbrowser op http://localhost:3000 (of een ander gespecificeerd poortnummer). Je wordt rechtstreeks doorgestuurd naar de startpagina.
+### In de navigatiebalk:
+1. Klik op Stemming-Verbeterende Maaltijden; als je een slechte dag hebt, krijg je recepten die je stemming verbeteren.
+2. Klik op Emotie-Eten en beantwoord de vragen; je krijgt recepten op basis van je antwoorden.
+3. Klik op Keukenvoorraad om beschikbare ingrediënten aan te geven. Druk op "Toevoegen" en vervolgens op "Indienen" wanneer je klaar bent. Na het indienen krijg je recepten op basis van de ingrediënten die je hebt gekozen. 
+4. Typ in het zoekvak als je een specifiek recept wilt zoeken en druk op Enter of op het zoekpictogram. Je wordt doorgestuurd naar de receptenfilterpagina en krijgt recepten op basis van je zoekopdracht, met de mogelijkheid om geavanceerde filters toe te passen.
+5. Klik op Inloggen als je wilt inloggen met een bestaand account of om te registreren.
+6. Als je bent ingelogd, kun je op Profiel klikken om je gegevens bij te werken en vervolgens op Opslaan te klikken op de pagina Bewerk Profiel.
+7. Klik op het app-logo om naar de startpagina te gaan.
+## Standaard Gebruikers
+Je kunt de applicatie gebruiken zonder in te loggen. Registratie en inloggen zijn alleen nodig om je profiel bij te werken. Omdat ik de Novi-backend gebruik, worden de aangemaakte gebruikers om de paar uur gewist. Je kunt het registratieformulier gebruiken om een nieuwe gebruiker aan te maken.

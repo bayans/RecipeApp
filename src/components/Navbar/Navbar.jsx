@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from "../../context/AuthContext";
 import Input from '../Input/Input';
 import Button from '../Button/Button';
-import logo from '../../recipe.png';
+import logo from '../../assets/recipe.png';
 import SearchIcon from '../SearchIcon';
 import './Navbar.css';
 
