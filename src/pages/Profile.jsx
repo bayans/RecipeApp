@@ -51,7 +51,6 @@ function Profile() {
 
     reader.onloadend = () => {
       setPhoto64(reader.result);
-      console.log(reader.result);
     };
 
     reader.readAsDataURL(file);
