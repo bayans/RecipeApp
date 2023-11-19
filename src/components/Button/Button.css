@@ -17,6 +17,20 @@
     cursor: not-allowed;
 }
 
+button.search {
+    position: absolute;
+    right: 4px;
+    background-color: transparent;
+    border-color: transparent;
+    height: 90%;
+    width: 50px;
+}
+
+button.search:hover {
+    cursor: pointer;
+    border-left-color: #000;
+}
+
 .btn-small {
     width: 70px;
 }
