@@ -32,7 +32,6 @@ const AuthContextProvider = ({ children }) => {
       .then(resp => resp.data)
       .then(data => {
         handleLogin(data.accessToken);
-        console.log('token : ' + data.accessToken);
       })
       .catch(error => {
         if (error.response.status === 401) {

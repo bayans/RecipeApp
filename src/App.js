@@ -9,6 +9,7 @@ import SuggestedRecipes from './pages/SuggestedRecipes';
 import RecipesIngredients from './pages/RecipesIngredients';
 import RecipesFilter from './pages/RecipesFilter';
 import AvailableIngredients from './pages/AvailableIngredients';
+import BadDayMode from './pages/BadDayMode';
 import Profile from './pages/Profile';
 import Login from './pages/Login';
 
@@ -39,6 +40,7 @@ const App = () => {
       <Route path="/recipes-ingredients" element={<RecipesIngredients selectedRecipe={selectedRecipe} />} />
       <Route path="/recipes-filter/:ingredientParam?" element={<RecipesFilter selectedRecipeHander={setSelectedRecipe} />} />
       <Route path="/available-ingredients" element={<AvailableIngredients selectedRecipeHander={setSelectedRecipe} />} />
+      <Route path="/bad-day-mode" element={<BadDayMode selectedRecipeHander={setSelectedRecipe} />} />
       <Route path="/profile" element={<ProtectedRoute element={<Profile />} />} />
       <Route path="/login" element={<Login />} />
     </Routes>

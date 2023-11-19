@@ -17,6 +17,10 @@
     cursor: not-allowed;
 }
 
+.btn-small {
+    width: 70px;
+}
+
 .deleteBtn {
     background-color: red;
     padding: 3px 5px;
