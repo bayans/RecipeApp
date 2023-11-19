@@ -10,7 +10,10 @@ const Form = (props) => {
     const showSubmitBtn = props.showSubmitBtn ?? true;
 
     const handleChange = (e, func) => {
-        func(e.target.value);
+        if (e.target.type === 'file')
+            func(e.target.files[0]);
+        else
+            func(e.target.value);
     }
 
     const mapFields = (fields) => fields.map((field, index) => getFieldByType(field, index));
@@ -26,6 +29,7 @@ const Form = (props) => {
                         <Input
                             className='form-input'
                             type={field.type || 'text'}
+                            accept={field.accept || null}
                             id={field.id || field.name}
                             name={field.name}
                             value={field.input}
@@ -83,6 +87,15 @@ const Form = (props) => {
                             </li>
                         ))}
                     </ul>
+                );
+            case 'photo-display':
+                return (
+                    field.photo64 && (
+                        <div key={index}
+                            className={field.className}
+                            style={{ backgroundImage: `url("${field.photo64}")` }}>
+                        </div>
+                    )
                 );
             default: return false
         }

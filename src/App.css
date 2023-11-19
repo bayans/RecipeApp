@@ -190,6 +190,13 @@
   margin: 12px 0;
 }
 
+.uploaded-photo-section {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  margin-bottom: 10px;
+}
+
 a {
   text-decoration: none;
   color: #000;
